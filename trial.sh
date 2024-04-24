@@ -4,5 +4,5 @@ number=(1 10)
 
 for entry in ${number[*]}
 do 
-    echo "HS"
+    echo 
 done 
