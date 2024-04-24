@@ -15,7 +15,7 @@ for db in ${db_size[@]}
                             do     
                             
                             srun -c 10 sh exec_alg.sh $Threads $seqlength $Nseq $db_size
-                            
+                            ##ficke
                              
                         done   
                 done
