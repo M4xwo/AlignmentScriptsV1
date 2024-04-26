@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash 
 
 ##script for a nested loops that iterate over every combination from used threats, query-file, reference-file and give every iteration 
 ##to the second script which gives the combinations into a vsearch 
