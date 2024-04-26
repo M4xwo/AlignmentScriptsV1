@@ -1,0 +1,12 @@
+# install.packages("ggplot2")
+library(ggplot2)
+
+daten <- read.table("", sep=";")
+
+
+head(daten)
+daten$threads_nseq <- in
+ggplot(daten, aes (x=V4, y=V1, col=V5, shape=as.factor(V2)))+
+    geom_point(size=5)+
+    scale_y_log10()
+    scale_x_log10()
