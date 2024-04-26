@@ -5,7 +5,7 @@
 /LETHE/COURSES/HPC24SS/AliScale/references ##reference directory
 time1=$(date +%s)                          ##takes the date before running the command to calculate the time afterwards
 
-vsearch --usearch_global /LETHE/COURSES/HPC24SS/AliScale/query/$2 --db /LETHE/COURSES/HPC24SS/AliScale/references/$3 -t $1
+vsearch --usearch_global /LETHE/COURSES/HPC24SS/AliScale/query/$2 --db /LETHE/COURSES/HPC24SS/AliScale/references/$3 --id 0.7 --uc test --threads $1
 ##vsearch searches for correct alignments betweend two fasta files. Directory of the file has to be given, file name is taken form loop script 
 ##
 
