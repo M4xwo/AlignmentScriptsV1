@@ -2,7 +2,7 @@
 ##xah
 rm bac_results_xah2.txt
 
-data_directory=$(head "/LETHE/COURSES/data/bac_genomes/refseq/xah")
+data_directory=$(cat "/LETHE/COURSES/data/bac_genomes/refseq/xah")
 
 ## echo $data_directory
 for index in $data_directory;
