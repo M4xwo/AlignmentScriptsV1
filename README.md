@@ -138,7 +138,7 @@ and damages to the HPC systems or the users own devices.
 Containers need to be pulled from a directory or an online source and then executed.
 Depending on the used registry or library the syntax may vary slightly.
 
-Popular regitries are for example:
+Popular registries are for example:
 
 * DockerHub
 * Singularity
