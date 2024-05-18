@@ -127,7 +127,7 @@ ggplot(daten, aes(x=V4, y=V1, col=V5, shape=threads_nseq))+
 ## Containers 
 
 Containers are storages for certain applications and all their configurations.
-They are an easy way for users to to get different jobs done without having to worry about special confiogurations 
+They are an easy way for users to to get different jobs done without having to worry about special configurations 
 for their device e.g. certain dependencies and versions for coding packages.
 
 Other than being very comfortable and user friendly, containers provide great consistency and therefore 
@@ -137,6 +137,13 @@ and damages to the HPC systems or the users own devices.
 
 Containers need to be pulled from a directory or an online source and then executed.
 Depending on the used registry or library the syntax may vary slightly.
+
+Popular regitries are for example:
+
+* DockerHub
+* Singularity
+
+or different services from Google, IBM and more.
 
 ## BacGenStat
 ```shell
