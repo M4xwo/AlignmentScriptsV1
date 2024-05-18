@@ -33,12 +33,14 @@ Markdown seems like a great tool to create well designed and interactive files t
 ## SLURM
 
 SLURM is a workload manager designed to protect the HPC-Server from being overloaded with too many tasks at the same time.
-On the one hand it is possible to reserve 	threads for different tasks, on the other it manages the total workload of all different users.
+On the one hand it is possible to reserve 	threads for different tasks, on the other it manages the amount and order of the jobs of all different users.
 
 SLURM or other similiar working workload managers are mostly preinstalled on HPC's. 
-
-To queue a task with SLURM you use the command -c before calling your scripts.
-To reserve a certain amount of threads you use the operator --threads and follow up with the number you wish to reserve.
+To get an overview of the free capacities of the HPC you can use the command `htop`. 
+Queueing a task with SLURM can be done by using the command `srun` before calling your scripts.
+To reserve a certain amount of threads you use the operator `-c` and follow up with the number you wish to reserve.
+The operator `--mem XG` lets you specify the amount of memory you'd like to use for your jobs.
+Using the `squeue` command you can check if your jobs made it into the queue and at which location they're at.
 By adding a "&" sign at the end of your command you can close the command line window and your command still gets processed in the background.
 
 
