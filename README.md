@@ -38,9 +38,9 @@ For our first project, we decided to test different sequence alignment tools for
 threaded runs.
 We used:
 
-..* Needle
-..* BLAST
-..* VSearch 
+* Needle
+* BLAST
+* VSearch 
 
 for comparison.
 
