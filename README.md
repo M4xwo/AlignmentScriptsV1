@@ -104,7 +104,23 @@ echo "$time_elapsed seconds; $1;  $2; $3"  >> results_max.txt  ##one output to f
 
 ```
 
+```R 
+##install.packages("ggplot2")
+library(ggplot2)
 
+daten <- read.table("C:/Users/woelf/OneDrive/Dokumente/GitHub/AlignmentScriptsV1/results_combined.csv", sep=";") 
+
+
+daten$threads_nseq <- interaction(daten$V2, daten$V3)   
+
+ggplot(daten, aes(x=V4, y=V1, col=V5, shape=threads_nseq))+ 
+  geom_point(size=5)+ 
+  scale_y_log10()+  
+  scale_x_log10()+  
+  scale_shape_manual(values = 0:10)+   
+  geom_smooth(se=F)+    
+  theme_bw()
+```
 
 ## BacGenStat
 ```shell
