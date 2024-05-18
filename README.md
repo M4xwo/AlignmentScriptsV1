@@ -41,7 +41,7 @@ Queueing a task with SLURM can be done by using the command `srun` before callin
 To reserve a certain amount of threads you use the operator `-c` and follow up with the number you wish to reserve.
 The operator `--mem XG` lets you specify the amount of memory you'd like to use for your jobs.
 Using the `squeue` command you can check if your jobs made it into the queue and at which location they're at.
-By adding a "&" sign at the end of your command you can close the command line window and your command still gets processed in the background.
+By adding a `&` sign at the end of your command you can close the command line window and your command still gets processed in the background.
 
 
 ## First Project: AliScale 
@@ -123,6 +123,13 @@ ggplot(daten, aes(x=V4, y=V1, col=V5, shape=threads_nseq))+
   geom_smooth(se=F)+    
   theme_bw()
 ```
+
+## Containers 
+
+
+
+
+
 
 ## BacGenStat
 ```shell
