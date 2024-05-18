@@ -32,6 +32,16 @@ Markdown seems like a great tool to create well designed and interactive files t
 
 ## SLURM
 
+SLURM is a workload manager designed to protect the HPC-Server from being overloaded with too many tasks at the same time.
+On the one hand it is possible to reserve 	threads for different tasks, on the other it manages the total workload of all different users.
+
+SLURM or other similiar working workload managers are mostly preinstalled on HPC's. 
+
+To queue a task with SLURM you use the command -c before calling your scripts.
+To reserve a certain amount of threads you use the operator --threads and follow up with the number you wish to reserve.
+By adding a "&" sign at the end of your command you can close the command line window and your command still gets processed in the background.
+
+
 ## First Project: AliScale 
 
 For our first project, we decided to test different sequence alignment tools for their speed, also comparing the differnces betweend single and multi-
@@ -44,6 +54,10 @@ We used:
 
 for comparison.
 
-We also 
+Every row in the classroom took another tool, me and the others in the third row took vsearch.
+
+## BacGenStat
+
+As our final project 
 
 # Discussion
