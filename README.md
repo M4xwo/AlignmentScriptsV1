@@ -167,6 +167,23 @@ echo "$index; $total_count; $num_genes; $gc_ratio; $phylum " >> bac_results_xah2
 ##echo $gc_ratio
 ```
 
+```R
+library(ggplot2)
+ 
+   daten <- read.table("/Users/ra76waj/HPCSS24/AlignmentScriptsV1/BacGen/complete.csv", sep=";") 
+   
+     
+     
+       ggplot(daten, aes(x=V2, y=V3, col=V4))+ 
+           geom_point(size = 1.5)+ 
+           scale_y_log10()+  
+           scale_x_log10()+  
+           scale_shape_manual(values = 0:10)+   
+           xlab("genome lenght")+
+           ylab("number of genes")+
+           theme_bw()
+```
+
 
 
 # Discussion
