@@ -184,6 +184,23 @@ library(ggplot2)
            theme_bw()
 ```
 
-
+```R
+library(ggplot2)
+##library(viridis)
+ 
+   daten <- read.table("/Users/ra76waj/HPCSS24/AlignmentScriptsV1/BacGen/part_taxonomy.csv", sep=";") 
+   
+     
+     
+       ggplot(daten, aes(x=V2, y=V3, col=V5))+  ##y=V3 for number of genes and taxonomy, y=V4 for gc_content and taxonomy 
+           geom_point(size = 1.5)+ 
+           scale_y_log10()+  
+           scale_x_log10()+  
+           scale_shape_manual(values = 0:10)+   
+           xlab("genome lenght")+
+           ylab("number of genes")+
+           theme_bw()
+           ##scale_colour_viridis(option="turbo", discrete=TRUE)
+```
 
 # Discussion
