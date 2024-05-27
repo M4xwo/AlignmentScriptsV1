@@ -93,7 +93,7 @@ SLURM or other similiar working workload managers are mostly preinstalled on HPC
 To get an overview of the free capacities of the HPC you can use the command `htop`. 
 Queueing a task with SLURM can be done by using the command `srun` before calling your scripts.
 To reserve a certain amount of threads you use the operator `-c` and follow up with the number you wish to reserve.
-The operator `--mem XG` lets you specify the amount of memory you'd like to use for your jobs.
+The operator `--mem "X"G` lets you specify the amount of memory you'd like to use for your jobs.
 Using the `squeue` command you can check if your jobs made it into the queue and at which location they're at.
 By adding a `&` sign at the end of your command you can close the command line window and your command still gets processed in the background.
 
@@ -111,7 +111,7 @@ for comparison.
 
 Every row in the classroom took another tool, me and the others in the third row took vsearch.
 We were provided with different genetic sequences to try out and with reference sequences which were downloaded
-form an online database in advance.
+from an online database in advance.
 
 First we had to write a for-loop script, that iterates over the different combination of sequences, reference files and different amount of threads used:
 
@@ -249,10 +249,10 @@ or different services from Google, IBM and more.
 ## BacGenStat
 
 For our second and final project we chose to analyze bacterial genomes from the NCBI database and calculate their GC content, their genome length and the number of genes they express.
-The database was already downloaded to the LETHE HPC of our faculty. It consists of .fna and .gff files. The .fna files contain the whole sequence of the genome while .gff files contain additional information for ecample the number of the expressed genes and the phylum of the bacteria.
+The database was already downloaded to the LETHE HPC of our faculty. It consists of .fna and .gff files. The .fna files contain the whole sequence of the genome while .gff files contain additional information for example the number of the expressed genes and the phylum of the bacteria.
 Because of the immense amount of genomes, we split up the total amount into smaller parts so that each course participant had around 3000 genomes to manage.
 
-As in our first project, we started with a for-loop script to iterate through every genome:
+As in our first project, I started with a for-loop script to iterate through every genome:
 
 ```shell
 
@@ -272,7 +272,7 @@ done
 
 ```
 xah was the name of my part of genomes.
-At first it was quite challenging to get the script to access the directory in the correct and working way but we figured it our again with some help of others.
+At first it was quite challenging to get the script to access the directory in the correct and working way but I figured it out again with some help of others.
 As with our first project, the itereation is given into the second script where the real magic is (supposed to be) happening:
 
 ```shell
@@ -305,7 +305,7 @@ Using the .gff files and the `grep`command we also get the number of expressed g
 On the last day of the course we also added the last part of the script which also takes the name of the phylum as well as the ID of the bacteria.
 That was also the time where we used a container, using the `docker`command to fetch the necessary data straight from the NCIB database which was really cool.
 
-As with our first project we merged our results and visualized them using RSTudio again:
+As with our first project we merged our results and visualized them using RStudio again:
 
 ```R
 library(ggplot2)
@@ -354,12 +354,12 @@ This plot also uses the [viridis colour maps](https://cran.r-project.org/web/pac
 
 ![alt text](image-3.png)
 
-Lastly we also did a third plot showing the relation between the GC_content and the genome lenght for the taxa in our parts of the data.
+Lastly we also did a third plot showing the relation between the GC content and the genome lenght for the taxa in our parts of the data.
 The used code is the same as for the second plot only the variable for the y-axis changes, as also seen in the note inside the code block:
 
 ![alt text](image-4.png)
 
-The plot is a too messy to be able to really tell taxonomic differences apart for the GC content but some trends seem to visible.
+The plot is a too messy to be able to really tell taxonomic differences apart for the GC content but some trends seem visible.
 As we discussed at the start of this project, Guanin and Cytosin have three bonds in between them compared to only two bonds for Adenin and Thymin, so it would be interesting to know or find out if the bacterial taxa with a higher GC content have more stable genomes. 
 In comparison between the second and third plot it is hard to make reliable statements for the correlation between the number of actively expressed genes and the GC content.
 
@@ -367,7 +367,8 @@ In comparison between the second and third plot it is hard to make reliable stat
 
 To be honest my expectations for this course were more than exceeded.
 I learned a lot about the use of HPC's and one key takeaway was that it is actually a lot easier than I expected once you get the hang of it.
-The amount of data we processed, sometimes maybe more succesful, sometimes less with only a limited amount of recurring commands for the linux command line is impressive in my opinion. 
+The amount of data we processed, sometimes maybe more succesful, sometimes less with only a limited amount of recurring commands 
+for the linux command line is impressive in my opinion. 
 After we learned about the basics in the first few days I was a little baffled when our first project arrived because after we talked about what we planned to do I would've never imagined to manage it. But using baby steps, great advice from fellow pariticpants and the assistance from Prof. Keller it worked out surprisingly well after several tries.
 Afterwards the second project was equally a welcome challenge and a great way to practice everything we learned until then. Especially the visualization was a great way to recap other stuff that we learned in the python and statistics modules and even opened up several new things as for example the seaborn library!
 Also getting introduced to Markdown and GitHub especially was really cool because both tools come with great easy to use features that seem really worth knowing about for future tasks.
