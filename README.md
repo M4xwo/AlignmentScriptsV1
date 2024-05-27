@@ -362,3 +362,10 @@ As we discussed at the start of this project, Guanin and Cytosin have three bond
 In comparison between the second and third plot it is hard to make reliable statements for the correlation between the number of actively expressed genes and the GC content.
 
 # Discussion
+
+To be honest my expectations for this course were more than exceeded.
+I learned a lot about the use of HPC's and one key takeaway was that is actually a lot easier than I expected once you get the hang of it.
+The amount of data we processed, sometimes maybe more succesful, sometimes less with only a limited amount of recurring commands for the linux command line is impressive in my opinion. 
+After we learned about the basics in the first few days I was a little baffled when our first project arrived because after we talked about what we planned to do I would've never imagined to manage it. But using baby steps, great advice from fellow pariticpants and the assistance from Prof. Keller it worked out surprisingly well after several tries.
+Afterwards the second project was equally a welcome challenge and a great way to practice everything we learned until then. Especially the visualization was a great way to recap other stuff that we learned in the python and statistics modules and even opened up several new things as for example the seaborn library!
+Also getting introduced to Markdown and GitHub especially was really cool because both tools come with great easy to use features that seem really worth knowing about for future tasks.
