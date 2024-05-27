@@ -15,3 +15,4 @@ while calculating the gc content we already need the total amount of bases in th
 Visualization can either be done in RStudio or Python afterwards, technically it should be poissible to script this aswell but I guess its too complicated 
 
 Its probably best to start with the calculation of the gc content, then
+xddd
