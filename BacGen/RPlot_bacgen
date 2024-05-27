@@ -1,0 +1,15 @@
+library(ggplot2)
+ 
+   daten <- read.table("/Users/ra76waj/HPCSS24/AlignmentScriptsV1/BacGen/bac_results_xah.txt", sep=";") 
+   
+     
+     
+       ggplot(daten, aes(x=V2, y=V3, col=V4))+ 
+           geom_point(size = 1.5)+ 
+           scale_y_log10()+  
+           scale_x_log10()+  
+           scale_shape_manual(values = 0:10)+   
+           xlab("genome lenght")+
+           ylab("number of genes")+
+           theme_bw()
+       
