@@ -4,6 +4,8 @@ Name: Max Wölfle
 
 Immatriculation Number: 11738266
 
+Some parts of this protocol were made with support by Moritz von Strempel and Felix Fohrmann 
+
 # Introduction
 
 At first I was sceptical because I thought the course was more or less only math like I've heard about Computational Biology I but then a friend of mine who did it in the 4th semester recommended it to me.
@@ -14,7 +16,7 @@ My expectations for the course are to learn how to use bigger networks to fulfil
 Another goal for me would be to make coding a continuous hobby. I already enjoyed coding Python for the coding module in the third semester but after the module was completed
 I didn't really know where to continue because I had no real idea about what projects to start.
 
-
+Soon after learning about GitHub I created my own private repository to work from, so if anything caught your interest and you would like to take a closer look at some files or images your can find it [here](https://github.com/M4xwo/AlignmentScriptsV1) although it is way more chaotic than I had hoped it would turn out. 
 
 # Course content
 
@@ -364,8 +366,10 @@ In comparison between the second and third plot it is hard to make reliable stat
 # Discussion
 
 To be honest my expectations for this course were more than exceeded.
-I learned a lot about the use of HPC's and one key takeaway was that is actually a lot easier than I expected once you get the hang of it.
+I learned a lot about the use of HPC's and one key takeaway was that it is actually a lot easier than I expected once you get the hang of it.
 The amount of data we processed, sometimes maybe more succesful, sometimes less with only a limited amount of recurring commands for the linux command line is impressive in my opinion. 
 After we learned about the basics in the first few days I was a little baffled when our first project arrived because after we talked about what we planned to do I would've never imagined to manage it. But using baby steps, great advice from fellow pariticpants and the assistance from Prof. Keller it worked out surprisingly well after several tries.
 Afterwards the second project was equally a welcome challenge and a great way to practice everything we learned until then. Especially the visualization was a great way to recap other stuff that we learned in the python and statistics modules and even opened up several new things as for example the seaborn library!
 Also getting introduced to Markdown and GitHub especially was really cool because both tools come with great easy to use features that seem really worth knowing about for future tasks.
+So not only was the course packed with interesting stuff to learn but it was also a very pleasant experience. The atmosphere in the course room was always very friendly and relaxed, we had lots of freedom to manage the tasks the way it suited us best and there was a great balance between things to learn and work on and enough space and time to have fun and experiment with all our new knowledge.
+To conlcude, I learned lots of interesting stuff, had a great time and this module is easily one of the best modules I experienced until now in my Bachelors Degree.
