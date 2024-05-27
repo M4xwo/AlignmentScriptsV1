@@ -22,7 +22,7 @@ Soon after learning about GitHub I created my own private repository to work fro
 
 ## Github
 
-I created a GitHub Account for the Python module in the 3rd Semester but never actually used it because there was no need.
+I created a GitHub Account for the Python module in the 3rd Semester but never actually used it because there was no need.<br>
 Now working on different branches for the protocol and using my own repository to be able to work on scripts wherever I like is really cool,
 even though at first the whole procedure of importing repositories into VS Code and switching between them melt my brain for a while.
 
@@ -89,12 +89,12 @@ After connecting we were asked to log in, so that we could transfer files and ac
 SLURM is a workload manager designed to protect the HPC-Server from being overloaded with too many tasks at the same time.
 On the one hand it is possible to reserve threads for different tasks, on the other it manages the amount and order of the jobs of all different users.
 
-SLURM or other similiar working workload managers are mostly preinstalled on HPC's. 
-To get an overview of the free capacities of the HPC you can use the command `htop`. 
-Queueing a task with SLURM can be done by using the command `srun` before calling your scripts.
-To reserve a certain amount of threads you use the operator `-c` and follow up with the number you wish to reserve.
-The operator `--mem "X"G` lets you specify the amount of memory you'd like to use for your jobs.
-Using the `squeue` command you can check if your jobs made it into the queue and at which location they're at.
+SLURM or other similiar working workload managers are mostly preinstalled on HPC's. <br>
+To get an overview of the free capacities of the HPC you can use the command `htop`. <br>
+Queueing a task with SLURM can be done by using the command `srun` before calling your scripts.<br>
+To reserve a certain amount of threads you use the operator `-c` and follow up with the number you wish to reserve.<br>
+The operator `--mem "X"G` lets you specify the amount of memory you'd like to use for your jobs.<br>
+Using the `squeue` command you can check if your jobs made it into the queue and at which location they're at.<br>
 By adding a `&` sign at the end of your command you can close the command line window and your command still gets processed in the background.
 
 
@@ -143,7 +143,7 @@ for db in $db_size;
 done
 ```
 I added several notes inside the code to better explain and remember what the different commands and lines are 
-used for.
+used for.<br>
 It took several test runs and changes to the code to find out about the correct working syntax, but after some trial and error and with the help of Alex and others from the course it worked out!
 From the loop-script every iteration is given into the second script, using the `srun` command of the SLURM workload manager.
 
@@ -169,9 +169,9 @@ echo "$time_elapsed seconds; $1 threads used; number of sequences: $2; size of d
 echo "$time_elapsed seconds; $1;  $2; $3"  >> results_max.txt  ##one output to further work with 
 
 ```
-The time measurement works by using the precise time and date before and after running the `vsearch`command and substracting the second date from the first one.
-VSearch searches for matching alignments between the two given .fasta files. Through using e.g. `$1`it is possible to call the exact same files and used threats as in the first script because `$1, $2, $3`refer to the operators given in the loop-script.
-In the end the results are echoed and hereby written into a .txt file. The others wrote their results into .csv files which in retrospective makes more sense to me but luckily the entries from both .txt and .csv files are easily mergeable using the linux command line!
+The time measurement works by using the precise time and date before and after running the `vsearch`command and substracting the second date from the first one.<br>
+VSearch searches for matching alignments between the two given .fasta files. Through using e.g. `$1`it is possible to call the exact same files and used threats as in the first script because `$1, $2, $3`refer to the operators given in the loop-script.<br>
+In the end the results are echoed and hereby written into a .txt file.<br> The others wrote their results into .csv files which in retrospective makes more sense to me but luckily the entries from both .txt and .csv files are easily mergeable using the linux command line!
 
 After all of us managed to get our scripts working, and the results were calculated by the HPC we unified and normalized all our data in one file and used a RStudio to plot all results for comparison.
 
@@ -197,10 +197,10 @@ We did the code for the visualization all together which results in the followin
 
 ![alt text](image.png)
 
-The different colours resemble the different tools used, while the elapsed time is plotted on the y-axis and the size of the files is plotted on the x-axis. The different shapes of the plot resemble the correlation between the number of used threads and the number of sequences.
+The different colours resemble the different tools used, while the elapsed time is plotted on the y-axis and the size of the files is plotted on the x-axis.<br> The different shapes of the plot resemble the correlation between the number of used threads and the number of sequences.<br>
 It's easy to see that Needle is by far the fastest tool while VSearch takes the middle field and blast depends heavily on the amount of used threads, which also raises questions about the way these different tools use capacities in general. 
 
-I also took a shot at plotting our results in Python and failed over and over again, only receiving the most boring and incorrect plots I had ever seen until a fellow course participant introduced me to seaborn. Seaborn turned out to be easy to use and returned a nice plot without too much effort.
+I also took a shot at plotting our results in Python and failed over and over again, only receiving the most boring and incorrect plots I had ever seen until a fellow course participant introduced me to seaborn.<br> Seaborn turned out to be easy to use and returned a nice plot without too much effort.
 They also have a detailed tutorial and general manual on their webpage: [Seaborn](https://seaborn.pydata.org/index.html)
 
 ```python
@@ -248,8 +248,8 @@ or different services from Google, IBM and more.
 
 ## BacGenStat
 
-For our second and final project we chose to analyze bacterial genomes from the NCBI database and calculate their GC content, their genome length and the number of genes they express.
-The database was already downloaded to the LETHE HPC of our faculty. It consists of .fna and .gff files. The .fna files contain the whole sequence of the genome while .gff files contain additional information for example the number of the expressed genes and the phylum of the bacteria.
+For our second and final project we chose to analyze bacterial genomes from the NCBI database and calculate their GC content, their genome length and the number of genes they express.<br>
+The database was already downloaded to the LETHE HPC of our faculty. It consists of .fna and .gff files.<br> The .fna files contain the whole sequence of the genome while .gff files contain additional information for example the number of the expressed genes and the phylum of the bacteria.
 Because of the immense amount of genomes, we split up the total amount into smaller parts so that each course participant had around 3000 genomes to manage.
 
 As in our first project, I started with a for-loop script to iterate through every genome:
@@ -271,7 +271,7 @@ for index in $data_directory;
 done 
 
 ```
-xah was the name of my part of genomes.
+xah was the name of my part of genomes.<br>
 At first it was quite challenging to get the script to access the directory in the correct and working way but I figured it out again with some help of others.
 As with our first project, the itereation is given into the second script where the real magic is (supposed to be) happening:
 
@@ -298,7 +298,7 @@ echo "$index; $total_count; $num_genes; $gc_ratio; $phylum " >> bac_results_xah2
 ```
 The first part sets the working directory for the script and unzips the files passed by the loop-script using `gunzip` which is really handy.
 
-In the second part we calculate the size of the genome and the GC content using `grep`from the provided .fna files.
+In the second part we calculate the size of the genome and the GC content using `grep`from the provided .fna files.<br>
 First I tried counting the bases by only using the wordcount `wc`command which didn't work out and resulted in an empty file.
 Using the .gff files and the `grep`command we also get the number of expressed genes.
 
@@ -326,8 +326,8 @@ library(ggplot2)
 
 ![alt text](image-2.png)
 
-The first plot shows that the size of the genomes correlates with the number of genes, which is not not really surprising.
-Both the middle and upper clouds of data suggest that somewhere the number of genes where counted multiple times..
+The first plot shows that the size of the genomes correlates with the number of genes,<br> which is not not really surprising.<br>
+Both the middle and upper clouds of data suggest that somewhere the number of genes where counted multiple times..<br>
 Obviously if these results were to be used in a publication or for further studies, the analysis would have to be redone and the scripts would have to be checked for errors but since it was just for us to get used to working with large amounts of data we can atleast tell that we succeeded.
 
 We then did a second plot using the second set of files including the taxonomy of the bacteria. For that we only used our parts of the results because the whole data would probably have been overwhelming.
@@ -365,12 +365,12 @@ In comparison between the second and third plot it is hard to make reliable stat
 
 # Discussion
 
-To be honest my expectations for this course were more than exceeded.
+To be honest my expectations for this course were more than exceeded.<br>
 I learned a lot about the use of HPC's and one key takeaway was that it is actually a lot easier than I expected once you get the hang of it.
-The amount of data we processed, sometimes maybe more succesful, sometimes less with only a limited amount of recurring commands 
-for the linux command line is impressive in my opinion. 
-After we learned about the basics in the first few days I was a little baffled when our first project arrived because after we talked about what we planned to do I would've never imagined to manage it. But using baby steps, great advice from fellow pariticpants and the assistance from Prof. Keller it worked out surprisingly well after several tries.
-Afterwards the second project was equally a welcome challenge and a great way to practice everything we learned until then. Especially the visualization was a great way to recap other stuff that we learned in the python and statistics modules and even opened up several new things as for example the seaborn library!
-Also getting introduced to Markdown and GitHub especially was really cool because both tools come with great easy to use features that seem really worth knowing about for future tasks.
-So not only was the course packed with interesting stuff to learn but it was also a very pleasant experience. The atmosphere in the course room was always very friendly and relaxed, we had lots of freedom to manage the tasks the way it suited us best and there was a great balance between things to learn and work on and enough space and time to have fun and experiment with all our new knowledge.
+The amount of data we processed, sometimes maybe more succesful,<br> sometimes less with only a limited amount of recurring commands 
+for the linux command line is impressive in my opinion.<br> 
+After we learned about the basics in the first few days I was a little baffled when our first project arrived because after we talked about what we planned to do I would've never imagined to manage it.<br> But using baby steps, great advice from fellow participants and the assistance from Prof. Keller it worked out surprisingly well after several tries.
+Afterwards the second project was equally a welcome challenge<br> and a great way to practice everything we learned until then. Especially the visualization was a great way to recap other stuff that we learned in the python and statistics modules and <br>even opened up several new things as for example the seaborn library!<br>
+Also getting introduced to Markdown and GitHub especially was really cool because both tools come with great easy to use features that seem really worth knowing about for future tasks.<br>
+So not only was the course packed with interesting stuff to learn but it was also a very pleasant experience.<br> The atmosphere in the course room was always very friendly and relaxed,<br> we had lots of freedom to manage the tasks the way it suited us best and there was a great balance between things to learn and work on and enough space and time to have fun<br> and experiment with all our new knowledge.<br>
 To conlcude, I learned lots of interesting stuff, had a great time and this module is easily one of the best modules I experienced until now in my Bachelors Degree.
